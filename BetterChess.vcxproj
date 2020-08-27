@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="board.cpp" />
+    <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="board.hpp" />
     <ClInclude Include="color.hpp" />
+    <ClInclude Include="item.hpp" />
     <ClInclude Include="items.hpp" />
     <ClInclude Include="pieces.hpp" />
     <ClInclude Include="tile.hpp" />
