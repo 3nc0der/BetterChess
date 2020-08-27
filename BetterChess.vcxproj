@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="board.cpp" />
+    <ClCompile Include="logfile.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tile.cpp" />
   </ItemGroup>
@@ -147,7 +148,9 @@
     <ClInclude Include="board.hpp" />
     <ClInclude Include="color.hpp" />
     <ClInclude Include="items.hpp" />
+    <ClInclude Include="logfile.hpp" />
     <ClInclude Include="pieces.hpp" />
+    <ClInclude Include="singleton.hpp" />
     <ClInclude Include="tile.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
