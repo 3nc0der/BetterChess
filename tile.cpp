@@ -5,7 +5,7 @@ int Tile::size;
 void Tile::updateTile()
 {
 	//the char holding the new representation letter
-	char representationLetter = (color == COLOR::BLACK) ? '#' : '~';
+	char representationLetter = (color == COLOR::B) ? '#' : '~';
 
 	//check for the piece
 	if (occupied_by != EMPTY)
@@ -68,7 +68,7 @@ void Tile::updateTile()
 		else
 		{
 			//otherwise, just push back the default tile color
-			midLine.push_back((color == COLOR::BLACK) ? '#' : '~');
+			midLine.push_back((color == COLOR::B) ? '#' : '~');
 		}
 	}
 
@@ -90,6 +90,15 @@ void Tile::updateTile()
 	}
 }
 
+Tile::Tile()
+{
+	size = 0;
+	color = COLOR::W;
+
+	occupied_by = PIECES::EMPTY;
+	houses = ITEMS::NOTHING;
+}
+
 Tile::Tile(COLOR c, int size)
 {
 	//initialize members
@@ -106,7 +115,7 @@ Tile::Tile(COLOR c, int size)
 	//initialize representation
 	switch (color)
 	{
-		case BLACK:
+		case B:
 		{
 			//build default line
 			for (int i = 0; i < size; i++)
@@ -120,7 +129,7 @@ Tile::Tile(COLOR c, int size)
 				tile.push_back(defaultLine);
 			}
 		}
-		case WHITE:
+		case W:
 		{
 			//build default line
 			for (int i = 0; i < size; i++)

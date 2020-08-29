@@ -39,6 +39,9 @@ class Tile
 
 	public:
 
+		//empty constructor
+		Tile();
+
 		//constructs a new tile
 		/*
 		* parameters:
