@@ -25,7 +25,7 @@ typedef enum e_color
 }COLOR;
 
 //logfile class, get an instance with the LOGFILE macro
-class c_logfile : public c_singleton<c_logfile>
+class c_logfile : public singleton<c_logfile>
 {
 public:
 
