@@ -5,7 +5,7 @@ int Tile::size;
 void Tile::updateTile()
 {
 	//the char holding the new representation letter
-	char representationLetter = '#';
+	char representationLetter = (color == COLOR::BLACK) ? '#' : '~';
 
 	//check for the piece
 	if (occupied_by != EMPTY)
@@ -55,12 +55,39 @@ void Tile::updateTile()
 		}
 	}
 
-	//calculate the position in the string where the char must be altered
-	int i = (((size / 2) + 1) * (size + 1)) - ((size / 2) + 1);
+	//build the new middle line
+	string midLine = "";
 
-	//change the char at i
-	tile.replace(tile.begin() + i - 1, tile.end() - i, 1, representationLetter);
+	for (int i = 0; i < size; i++)
+	{
+		if (i == (size - 1) / 2)
+		{
+			//this is the new representationLetter
+			midLine.push_back(representationLetter);
+		}
+		else
+		{
+			//otherwise, just push back the default tile color
+			midLine.push_back((color == COLOR::BLACK) ? '#' : '~');
+		}
+	}
 
+	//build the updated tile
+	tile.clear();
+
+	for (int i = 0; i < size; i++)
+	{
+		if (i == (size - 1) / 2)
+		{
+			//the middle line has to be the updated one
+			tile.push_back(midLine);
+		}
+		else
+		{
+			//every other line is just the default one
+			tile.push_back(defaultLine);
+		}
+	}
 }
 
 Tile::Tile(COLOR c, int size)
@@ -81,26 +108,30 @@ Tile::Tile(COLOR c, int size)
 	{
 		case BLACK:
 		{
+			//build default line
 			for (int i = 0; i < size; i++)
 			{
-				for (int j = 0; j < size; j++)
-				{
-					tile.push_back('#');
-				}
+				defaultLine.push_back('#');
+			}
 
-				tile.push_back('\n');
+			//build the tile
+			for (int i = 0; i < size; i++)
+			{
+				tile.push_back(defaultLine);
 			}
 		}
 		case WHITE:
 		{
+			//build default line
 			for (int i = 0; i < size; i++)
 			{
-				for (int j = 0; j < size; j++)
-				{
-					tile.push_back('_');
-				}
+				defaultLine.push_back('~');
+			}
 
-				tile.push_back('\n');
+			//build the tile
+			for (int i = 0; i < size; i++)
+			{
+				tile.push_back(defaultLine);
 			}
 		}
 	}
@@ -116,8 +147,20 @@ int Tile::getSize()
 	return size;
 }
 
+#if (defined DEBUG) || (defined _DEBUG)
 void Tile::printTile()
 {
-	std::cout << tile << std::endl;
+	//build the tile string
+	string res = "";
+
+	for (int i = 0; i < size; i++)
+	{
+		res += tile.at(i);
+		res += '\n';
+	}
+
+	//print the tile string
+	cout << res << endl;
 }
+#endif
 

@@ -7,6 +7,9 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
+#include <vector>
+
+using namespace std;
 
 class Tile
 {
@@ -26,7 +29,10 @@ class Tile
 		COLOR color;
 
 		//a representation of one tile
-		std::string tile;
+		vector<string> tile;
+
+		//the default line of the tile
+		string defaultLine;
 
 		//updates the tile representation
 		void updateTile();
@@ -63,9 +69,12 @@ class Tile
 		void house(ITEMS item) { houses = item; updateTile(); };
 
 		//returns the visual representation of the tile
-		std::string getTile() { return tile; };
+		vector<string> getTile() { return tile; };
 
+
+#if (defined DEBUG) || (defined _DEBUG)
 		//prints the tile on console
 		//for debugging only
 		void printTile();
+#endif
 };
