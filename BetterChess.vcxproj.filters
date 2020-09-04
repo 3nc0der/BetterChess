@@ -25,6 +25,8 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="item.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="logfile.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -49,6 +51,8 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="item.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="logfile.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
