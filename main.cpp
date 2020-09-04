@@ -1,12 +1,8 @@
-#include "tile.hpp"
+#include "board.hpp"
 
 int main()
 {
-	Tile* t = new Tile(COLOR::WHITE, 3);
-	t->printTile();
-
-	t->occupie(QUEEN);
-	t->printTile();
+	BOARD->drawBoard();
 
 	return 0;
 }

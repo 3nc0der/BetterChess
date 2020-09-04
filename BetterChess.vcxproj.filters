@@ -25,6 +25,7 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="item.cpp">
+    <ClCompile Include="logfile.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,6 +46,10 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="item.hpp">
+    <ClInclude Include="logfile.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
