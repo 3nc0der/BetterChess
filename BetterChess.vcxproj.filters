@@ -24,6 +24,7 @@
     <ClCompile Include="tile.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="item.cpp">
     <ClCompile Include="logfile.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -44,6 +45,7 @@
     <ClInclude Include="color.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="item.hpp">
     <ClInclude Include="logfile.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
