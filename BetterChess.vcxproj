@@ -143,6 +143,7 @@
     <ClCompile Include="item.cpp" />
     <ClCompile Include="logfile.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="piece.cpp" />
     <ClCompile Include="tile.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="item.hpp" />
     <ClInclude Include="items.hpp" />
     <ClInclude Include="logfile.hpp" />
+    <ClInclude Include="piece.hpp" />
     <ClInclude Include="pieces.hpp" />
     <ClInclude Include="singleton.hpp" />
     <ClInclude Include="tile.hpp" />
