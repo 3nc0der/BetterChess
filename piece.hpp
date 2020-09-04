@@ -8,7 +8,7 @@ class Piece
 	public:
 
 		//creates a new empty piece
-		Piece();
+		Piece(PIECES type, int x, int y);
 
 		//destroys this piece
 		~Piece();
@@ -16,11 +16,21 @@ class Piece
 		//pure virtual move method
 		virtual void move() = 0;
 
-		//checks what units this piece is currently attacking
-		virtual Piece* getAttackedPieces();
+		//this method is automatically called, when this piece moves on the field of an enemy unit
+		void attack(Piece* attackedUnit);
 
-		//checks by what pieces this piece is currently being attacked
-		virtual Piece* getAttackingPieces();
+		//this method is automatically called, when this piece moves over an item
+		void collect(ITEMS collected);
+
+		//getter & setter
+
+		ITEMS getPossesedItem() { return possesedItem; };
+
+		bool isAlive() { return is_alive; };
+
+		PIECES getPieceType() { return pieceType; };
+
+		int* getPosition() { int a[2] = { xPos, yPos }; return a; };
 
 	private:
 
@@ -32,4 +42,7 @@ class Piece
 
 		//where the unit is on the board
 		int xPos, yPos;
+
+		//tells if the piece is still in game or if it got slain
+		bool is_alive;
 };
