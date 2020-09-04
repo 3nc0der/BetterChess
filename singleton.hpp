@@ -2,35 +2,35 @@
 
 //singleton class to make sure only one instance of a certain class exists
 template <class T>
-class c_singleton
+class singleton
 {
 protected:
 	
 	//holds the instance
-	static T* mp_singleton;
+	static T* m_singleton;
 
 public:
 
-	virtual ~c_singleton() {};
+	virtual ~singleton() {};
 
 	//returns the instance and creates a new one if no exists
-	inline static T* mf_get()
+	inline static T* get()
 	{
-		if (!mp_singleton)
+		if (!m_singleton)
 		{
-			mp_singleton = new T();
+			m_singleton = new T();
 		}
 
-		return mp_singleton;
+		return m_singleton;
 	}
 
 	//safe deletes the instance
-	inline static void mf_del()
+	inline static void del()
 	{
-		if (mp_singleton)
+		if (m_singleton)
 		{
-			delete mp_singleton;
-			mp_singleton = nullptr;
+			delete m_singleton;
+			m_singleton = nullptr;
 		}
 
 		return;
@@ -38,4 +38,4 @@ public:
 };
 
 template <class T>
-T *c_singleton<T>::mp_singleton = 0;
+T* singleton<T>::m_singleton = 0;

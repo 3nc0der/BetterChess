@@ -2,6 +2,6 @@
 
 enum COLOR
 {
-	BLACK = 0,
-	WHITE
+	B = 0,
+	W
 };
