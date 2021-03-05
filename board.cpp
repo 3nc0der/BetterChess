@@ -23,7 +23,7 @@ Board::~Board()
 
 void Board::drawBoard()
 {
-	LOG->mf_writeToLog("Drawing board.", CYAN);
+	LOG->writeToLog("Drawing board.", LOG_COLOR::CYAN);
 
 	string res = "";
 

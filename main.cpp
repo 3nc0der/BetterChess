@@ -2,9 +2,9 @@
 
 int main()
 {
-	LOG->mf_writeToLog("Starting new game...", GREEN);
+	LOG->writeToLog("Starting new game...", LOG_COLOR::GREEN);
 	BOARD->drawBoard();
 
-	LOG->mf_writeToLog("Shutting down program...", GREEN);
+	LOG->writeToLog("Shutting down program...", LOG_COLOR::GREEN);
 	return 0;
 }
