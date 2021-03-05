@@ -115,7 +115,7 @@ Tile::Tile(COLOR c, int size)
 	//initialize representation
 	switch (color)
 	{
-		case B:
+		case COLOR::B:
 		{
 			//build default line
 			for (int i = 0; i < size; i++)
@@ -128,8 +128,8 @@ Tile::Tile(COLOR c, int size)
 			{
 				tile.push_back(defaultLine);
 			}
-		}
-		case W:
+		} break;
+		case COLOR::W:
 		{
 			//build default line
 			for (int i = 0; i < size; i++)
@@ -142,6 +142,10 @@ Tile::Tile(COLOR c, int size)
 			{
 				tile.push_back(defaultLine);
 			}
+		} break;
+		default:
+		{
+
 		}
 	}
 }

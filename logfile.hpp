@@ -24,8 +24,10 @@ typedef enum class log_color
 	DEFAULT = 8
 }LOG_COLOR;
 
-//log file class, get an instance with the LOGFILE macro
-class logfile : public singleton<logfile>
+#define LOG c_logfile::get()
+
+//logfile class, get an instance with the LOGFILE macro
+class c_logfile : public singleton<c_logfile>
 {
 public:
 

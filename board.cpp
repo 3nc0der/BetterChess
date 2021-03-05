@@ -23,6 +23,8 @@ Board::~Board()
 
 void Board::drawBoard()
 {
+	LOG->mf_writeToLog("Drawing board.", CYAN);
+
 	string res = "";
 
 	//build border line
