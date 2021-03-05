@@ -38,7 +38,7 @@ c_logfile::~c_logfile()
 
 void c_logfile::mf_writeToLog(const char* text)
 {
-	mf_writeToLog(text, DEFAULT);
+	mf_writeToLog(text, COLOR::DEFAULT);
 }
 
 void c_logfile::mf_writeToLog(const char* text, e_color color)
@@ -106,39 +106,39 @@ void c_logfile::mf_writeToLog(const char* text, e_color color, bool critical)
 	switch (color)
 	{
 		//and color the text accordingly
-		case BLACK:
+		case COLOR::BLACK:
 		{
 			fprintf_s(mv_logfile, "color:#000000;\">%s", text);
 		}break;
-		case WHITE:
+		case COLOR::WHITE:
 		{
 			fprintf_s(mv_logfile, "color:#FFFFFF;\">%s", text);
 		}break;
-		case RED:
+		case COLOR::RED:
 		{
 			fprintf_s(mv_logfile, "color:#FF0000;\">%s", text);
 		}break;
-		case GREEN:
+		case COLOR::GREEN:
 		{
 			fprintf_s(mv_logfile, "color:#00FF00;\">%s", text);
 		}break;
-		case BLUE:
+		case COLOR::BLUE:
 		{
 			fprintf_s(mv_logfile, "color:#0000FF;\">%s", text);
 		}break;
-		case YELLOW:
+		case COLOR::YELLOW:
 		{
 			fprintf_s(mv_logfile, "color:#FFFF00;\">%s", text);
 		}break;
-		case PURPLE:
+		case COLOR::PURPLE:
 		{
 			fprintf_s(mv_logfile, "color:#FF00FF;\">%s", text);
 		}break;
-		case CYAN:
+		case COLOR::CYAN:
 		{
 			fprintf_s(mv_logfile, "color:#00FFFF;\">%s", text);
 		}break;
-		case DEFAULT:
+		case COLOR::DEFAULT:
 		{
 			fprintf_s(mv_logfile, "\">%s", text);
 		}break;

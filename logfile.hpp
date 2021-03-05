@@ -11,7 +11,7 @@ using namespace std;
 constexpr auto MAX_BUFFER = 1024;
 
 //predefined colors
-typedef enum e_color
+typedef enum class e_color
 {
 	BLACK = 0,
 	WHITE = 1,
