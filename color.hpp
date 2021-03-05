@@ -1,7 +1,7 @@
 #pragma once
 
-enum COLOR
+enum class COLOR
 {
-	BLACK = 0,
-	WHITE
+	B = 0,
+	W
 };

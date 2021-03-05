@@ -1,12 +1,10 @@
-#include "tile.hpp"
+#include "board.hpp"
 
 int main()
 {
-	Tile* t = new Tile(COLOR::WHITE, 3);
-	t->printTile();
+	LOG->mf_writeToLog("Starting new game...", GREEN);
+	BOARD->drawBoard();
 
-	t->occupie(QUEEN);
-	t->printTile();
-
+	LOG->mf_writeToLog("Shutting down program...", GREEN);
 	return 0;
 }
